@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>결과</h2>
+    <div id="result"></div>
+
+    <script>
+        // 결과를 화면에 출력하는 함수
+        function appendResult(text) {
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML += text + "<br>";
+        }
+
+        // 1. 점수를 입력받아서 학점을 출력해 봅시다
+        function calculateGrade(score) {
+            let grade;
+            if (score >= 90) {
+                grade = "A";
+            } else if (score >= 80) {
+                grade = "B";
+            } else if (score >= 70) {
+                grade = "C";
+            } else if (score >= 60) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+            return grade;
+        }
+
+        // 1. 점수를 입력받아서 학점을 출력하고 화면에 결과 표시
+        function inputGradeAndDisplay() {
+            let score = prompt("점수를 입력하세요:");
+            let grade = calculateGrade(score);
+            appendResult("점수: " + score + " - 학점: " + grade);
+        }
+
+        // 2.1 1번 문제를 3번 반복하기
+        function repeatThreeTimes() {
+            for (let i = 0; i < 3; i++) {
+                inputGradeAndDisplay();
+            }
+        }
+
+        // 2.2 1번 문제를 점수가 음수가 입력되기 전까지 반복하기
+        function repeatUntilNegative() {
+            while (true) {
+                let score = prompt("점수를 입력하세요:");
+                if (score < 0) break;
+                let grade = calculateGrade(score);
+                appendResult("점수: " + score + " - 학점: " + grade);
+            }
+        }
+
+        // 3. 구구단 (2단 출력)
+        function printMultiplicationTable2() {
+            let result = "2단:<br>";
+            for (let i = 1; i <= 9; i++) {
+                result += "2 x " + i + " = " + (2 * i) + "<br>";
+            }
+            appendResult(result);
+        }
+
+        // 4. 2~5단까지 출력하기
+        function printMultiplicationTable2to5() {
+            let result = "";
+            for (let dan = 2; dan <= 5; dan++) {
+                result += dan + "단:<br>";
+                for (let i = 1; i <= 9; i++) {
+                    result += dan + " x " + i + " = " + (dan * i) + "<br>";
+                }
+                result += "<br>";
+            }
+            appendResult(result);
+        }
+
+        // 5. 별출력 (단 *별 한개를 이용하기)
+        function printStars() {
+            // 1) *
+            appendResult("*");
+
+            // 2) *****
+            appendResult("*****");
+
+            // 3) *****
+            //    *****
+            //    *****
+            appendResult("*****<br>*****<br>*****");
+
+            // 4) *
+            //    **
+            //    ***
+            let result = "";
+            for (let i = 1; i <= 3; i++) {
+                for (let j = 1; j <= i; j++) {
+                    result += "*";
+                }
+                result += "<br>";
+            }
+            appendResult(result);
+
+            // 5) ***
+            //    **
+            //    *
+            result = "";
+            for (let i = 3; i >= 1; i--) {
+                for (let j = 1; j <= i; j++) {
+                    result += "*";
+                }
+                result += "<br>";
+            }
+            appendResult(result);
+        }
+
+        // 6. 구구단 while, do~while 해결하기
+        function printMultiplicationTableWhile() {
+            let dan = 2;
+            while (dan <= 5) {
+                let result = dan + "단:<br>";
+                let i = 1;
+                while (i <= 9) {
+                    result += dan + " x " + i + " = " + (dan * i) + "<br>";
+                    i++;
+                }
+                appendResult(result);
+                dan++;
+            }
+        }
+
+        function printMultiplicationTableDoWhile() {
+            let dan = 2;
+            do {
+                let result = dan + "단:<br>";
+                let i = 1;
+                do {
+                    result += dan + " x " + i + " = " + (dan * i) + "<br>";
+                    i++;
+                } while (i <= 9);
+                appendResult(result);
+                dan++;
+            } while (dan <= 5);
+        }
+
+        // 실행 예시
+        inputGradeAndDisplay();  // 1번 문제
+        repeatThreeTimes();      // 2.1
+        repeatUntilNegative();   // 2.2
+        printMultiplicationTable2();       // 3번 문제
+        printMultiplicationTable2to5();    // 4번 문제
+        printStars();                      // 5번 문제
+        printMultiplicationTableWhile();   // 6번 문제 - while
+        printMultiplicationTableDoWhile(); // 6번 문제 - do~while
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> count 하기 </h2>
+    <h2> count 변수의 값을 1 증가 시키기 , 10번 수행하기</h2>
+
+    <button id="countButton">Increase Count</button>
+    <div id="output"></div>
+
+    <script>
+        let count = 0;
+
+        document.getElementById("countButton").addEventListener("click", function() {
+            if (count < 10) {
+                count++;
+                document.getElementById("output").innerHTML += "count=" + count + "<br>";
+            } else {
+                alert("Count has already reached 10.");
+            }
+        });
+    </script>
+    
+</body>
+</html>

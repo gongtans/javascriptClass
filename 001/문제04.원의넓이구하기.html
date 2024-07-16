@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>원주 : 원의 둘레 = 지름 (반지름*2) * 원주율</h2>
+    <h2>원의 넓이 : 반지름(세로) * 반지름 * 원주율 (가로) => 원주율 * 반지름^2</h2>
+
+    <button onclick="calculateArea()">원의 넓이 계산하기</button>
+    <div id="result"></div>
+
+    <script>
+        // 결과를 화면에 출력하는 함수
+        function appendResult(text) {
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = text;
+        }
+
+        // 원의 넓이를 계산하는 함수
+        function calculateArea() {
+            let diameter = prompt("지름을 입력하세요:");
+            let radius = diameter / 2;
+            let area = 3.14 * radius * radius;
+            appendResult("지름: " + diameter + " - 원의 넓이: " + area);
+        }
+    </script>
+    
+</body>
+</html>
