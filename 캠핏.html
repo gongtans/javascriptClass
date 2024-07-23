@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ header{
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: gray;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav a{
+    padding: 3px;
+}
+p{
+    font-weight: 800;
+}
+.post{
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+.bast{
+    border: 0px solid grey;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    color: black;
+    margin-bottom: 16px;
+}
+.bast img{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.title{
+    font-size: 20px;
+}
+.bast-content {
+    display: flex;
+    flex-direction: column;
+}
+.poto {
+    display: flex; /* 이미지를 가로로 정렬 */
+    gap: 10px; /* 이미지 간격 추가 */
+   
+}
+.poto img {
+    width: 130px;
+    height: 162px;
+    position: relative;
+    border-radius: 10px;
+}
+.poto .text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.image-wrapper {
+    position: relative;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="nav-menu">홈</a>
+            <a href="#" class="nav-menu">캠핑로그</a>
+            <a href="#" class="nav-menu">캠핑톡톡</a>
+            <a href="#" class="nav-menu">궁금해요</a>
+            <a href="#" class="nav-menu">아티클</a>
+        </nav>
+    </header>
+<hr>
+    <main>
+        <h3>Best 캠핑 포토</h3>
+        <div class="poto">
+            <div class="image-wrapper">
+                <img src="/img/수영장물놀이.jpg" alt="수영">
+                <div class="text-overlay">75 장수황</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="/img/밥.jpeg" alt="밥">
+                <div class="text-overlay">캠퍼442123</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="/img/강아지.jpeg" alt="강아지">
+                <div class="text-overlay">캠퍼602329</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="/img/텐트.jpeg" alt="텐트">
+                <div class="text-overlay">정강콩땅</div>
+            </div>
+        </div>
+        <h3>Best 캠핑 로그</h3>
+        <div>
+        <a href="#" class="bast">
+            <img src="/img/버블.jpg" alt="버블파티 이미지"> <!-- 이미지 추가 -->
+            <div class="bast-content">
+                <p class="title">버블파티!</p>
+                <p>아이들이 참 좋아했고, 타프하우스에 에어컨이 있어서 좋았어요! 간단하게<br>
+                1박 하고 와도 너무 좋았습니다.</p>
+            </div>
+        </a>
+        </div>
+
+        <a href="#" class="bast">
+            <img src="/img/여름캠.jpg" alt="행복한 여름캠 이미지"> <!-- 이미지 추가 -->
+            <div class="bast-content">
+                <p class="title">더할 나위 없이 행복했던 여름캠이엇어요...!</p>
+                <p>사장님 계속 돌아다니시며 부지런히 케어해주시고,캠핑장 너무너무 쾌적하고 <br>
+                날씨요정도 손을들어줘서 장마철인데 둘째날 밤늦은시간에만 비가와줘서 다음날 텐트 잘 말리고<br>
+                철수할때 사장님께서 에어건으로 물기 마저 날려주셔서 너무너무 감사했어요!</p>
+            </div>
+        </a>
+
+        <a href="#" class="bast">
+            <img src="/img/빗소리.jpg" alt="빗소리와 캠핑 이미지"> <!-- 이미지 추가 -->
+            <div class="bast-content">
+                <p class="title">빗소리도 좋고 대만족 휴식을 취하고 왔습니다.</p>
+                <p>캠핑하기로 마음먹고 준비를 하고 생애첫 캠핑장으로<br>
+                산머루농원캠핑장을 선택하고 방문 하였습니다 <br>
+                시설 환경 정말 만족스러웠고, 싸이트도 선착순인데
+                널찍하니 좋았습니다.</p>
+            </div>
+        </a>
+        
+        <h3>인기 게시글</h3>
+        <a href="#" class="post">
+            안녕하세요 :> 저는 캠핑을 즐기는 동시에 의공학을 전공하고 있는 대학생입니다. <br>
+            SK LOOKIE라는 창업동아리에서 에어부목이라는 제품을 개발하고 있습니다.
+        </a> <br>
+        <a href="#" class="post">
+            그동안 캠핑 다니며 베스트로 꼽히는<br>
+            캠핑음식들 :-D
+        </a>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<script>
+
+        
+
+    //로컬저장소에 데이터 저장하기 ( 키, 값(value));
+
+    localStorage.setItem( "testKey", "수박");  //
+
+
+
+    //로컬저장소에 데이터 가져오기 (키 이름으로 가져옴)
+
+    let result  =localStorage.getItem("testKey");
+
+
+
+    console.log( result);
+
+</script>
+
+<ul class="list">
+
+</ul>
+
+
+
+<script> 
+
+    let  search= ["과자", "수박", "선크림"];
+
+    let searchString  = JSON.stringify( search);
+
+    localStorage.setItem("search" , searchString);
+
+
+
+    let readSearchString  = localStorage.getItem("search");
+
+    let readSearch  = JSON.parse(readSearchString );
+
+
+
+    console.log(readSearch );
+
+
+
+    let list = document.querySelector(".list");
+
+
+
+    let str="";
+
+    for(let i=0; i< readSearch.length; i++){
+
+        let item  = readSearch[i];
+
+        str += "<li>" +  item  + "</li>";
+
+    }
+
+    list.innerHTML = str;
+
+
+
+</script>
